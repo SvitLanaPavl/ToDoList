@@ -38,6 +38,10 @@ toDoDivEl.appendChild(createLi);
 
 createLi.innerText = toDoInput.value;
 toDoInput.value = '';
+errorMsg.style.display = 'none';
+searchInput.value = '';
+displayTodos();
+clearBtn.style.visibility = 'hidden';
 disabledButton();
 }
 
@@ -97,7 +101,7 @@ if(searchResult.length === 0) {
     errorMsg.style.display = 'none';
 }
 else {
-    displayTodos;
+    displayTodos();
 }
 };
 
