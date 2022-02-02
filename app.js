@@ -74,10 +74,11 @@ completed.classList.toggle('completed');
 const clearBtnRvl = () => {
     if(searchInput.value.length > 0) {
     clearBtn.style.visibility = 'visible';
-    errorMsg.style.display = 'none';
+    
 }
 else {
     clearBtn.style.visibility = 'hidden';
+    
 }
 
  
@@ -89,25 +90,28 @@ const errorMsg = document.createElement('li');
 errorMsg.setAttribute('id', 'error');
 error.appendChild(errorMsg);
 errorMsg.innerText = 'Items not found';
-errorMsg.style.display = 'none';
+
 
 const clearInput = () => {
 searchInput.value = '';
 clearBtn.style.visibility = 'hidden';
-errorMsg.style.display = 'none';
 displayTodos();
 
 if(searchResult.length === 0) {
-    errorMsg.style.display = 'none';
+   
+    errorMsg.style.display = 'none'; 
 }
 else {
     displayTodos();
 }
 };
 
+
+
+
 //display on search
 
-const displayTodos = () => {
+function displayTodos () {
     const searchString = searchInput.value.toLowerCase();
     const toDo = document.querySelectorAll('.todo-div');
     let itemsAvailable = false;
@@ -123,9 +127,10 @@ const displayTodos = () => {
     
     } });
     
-    if(itemsAvailable) {
+    if(itemsAvailable || searchInput.value.length === 0) {
     errorMsg.style.display = 'none';
     }
+   
     else {
     errorMsg.style.display = 'inline'
     }
