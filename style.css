@@ -203,6 +203,10 @@ button .completed-btn {
     height: 20px;
 }
 
+.todo {
+    font-size: 1.2rem;
+}
+
 }
 
 @media screen and (max-width: 600px) {
@@ -232,14 +236,18 @@ button .completed-btn {
 }
 
 .todo-list {
-    width: 80%;
+    width: 90%;
+}
+
+.todo {
+    font-size: 1rem;
 }
     
 }    
 
 @media screen and (max-width: 550px) {
 .todo-list {
-    width: 90%;
+    width: 100%;
 }
 
     .todo-div {
