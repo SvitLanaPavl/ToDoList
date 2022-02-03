@@ -230,11 +230,17 @@ button .completed-btn {
     width: 20px;
     height: 20px;
 }
+
+.todo-list {
+    width: 80%;
+}
     
 }    
 
 @media screen and (max-width: 550px) {
-
+.todo-list {
+    width: 90%;
+}
 
     .todo-div {
         width: 70%;
